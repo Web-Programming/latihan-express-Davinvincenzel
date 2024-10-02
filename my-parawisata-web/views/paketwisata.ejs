@@ -1,0 +1,52 @@
+<%- include('master', 
+{
+  title: title,
+  body: `
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/borobudur.png" class="card-img-top" alt="Borobudur">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Harga: Rp. 1,000,000</p>
+              <p class="card-text">Rating: 
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+              </p>
+              <button class="btn btn-primary order-btn" data-title="Borobudur" data-price="Rp. 1,000,000">Order</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/prambanan.png" class="card-img-top" alt="Prambanan">
+            <div class="card-body">
+              <h5 class="card-title">Prambanan</h5>
+              <p class="card-text">Harga: Rp. 800,000</p>
+              <p class="card-text">Rating: 
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </p>
+              <button class="btn btn-primary order-btn" data-title="Prambanan" data-price="Rp. 800,000">Order</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/bali.png" class="card-img-top" alt="Bali">
+            <div class="card-body">
+              <h5 class="card-title">Bali</h5>
+              <p class="card-text">Harga: Rp. 2,000,000</p>
+              <p class="card-text">Rating: 
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+              </p>
+              <button class="btn btn-primary order-btn" data-title="Bali" data-price="Rp. 2,000,000">Order</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+  `
+})
+%>
