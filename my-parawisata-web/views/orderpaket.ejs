@@ -1,8 +1,42 @@
-<%- include('master', 
-{
-  title: 'Order Paket Wisata',
+<%- include('master', { 
+  title: title,
   body: `
-
+  <div class="container mt-4">
+    <h2>Form Pemesanan Paket Wisata</h2>
+    <form action="/orderdetail" method="POST">
+      <div class="mb-3">
+        <label for="paketWisata" class="form-label">Pilih Paket Wisata</label>
+        <select class="form-select" id="paketWisata" name="paketWisata" required>
+          <option value="">Pilih paket wisata...</option>
+          <option value="Jembatan Ampera" data-price="250000">Jembatan Ampera</option>
+          <option value="Benteng Kuto Besak" data-price="200000">Benteng Kuto Besak</option>
+          <option value="Museum Balaputra Dewa" data-price="180000">Museum Balaputra Dewa</option>
+          <option value="Taman Wisata Alam Punti Kayu" data-price="150000">Taman Wisata Alam Punti Kayu</option>
+          <option value="Taman Purbakala Bukit Siguntang" data-price="100000">Taman Purbakala Bukit Siguntang</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="harga" class="form-label">Harga</label>
+        <input type="text" class="form-control" id="harga" name="harga" readonly>
+      </div>
+      <div class="mb-3">
+        <label for="nama" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="nama" name="nama" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
   `
-})
-%>
+}) %>
+
+<script>
+  document.getElementById('paketWisata').addEventListener('change', function() {
+    const selectedOption = this.options[this.selectedIndex];
+    const price = selectedOption.getAttribute('data-price');
+    document.getElementById('harga').value = price ? 'Rp. ' + parseInt(price).toLocaleString('id-ID') : '';
+  });
+</script>

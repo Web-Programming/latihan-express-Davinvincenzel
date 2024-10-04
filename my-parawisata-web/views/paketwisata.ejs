@@ -2,51 +2,57 @@
 {
   title: title,
   body: `
-    <div class="container mt-4">
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="images/borobudur.png" class="card-img-top" alt="Borobudur">
-            <div class="card-body">
-              <h5 class="card-title">Borobudur</h5>
-              <p class="card-text">Harga: Rp. 1,000,000</p>
-              <p class="card-text">Rating: 
-                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-              </p>
-              <button class="btn btn-primary order-btn" data-title="Borobudur" data-price="Rp. 1,000,000">Order</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="images/prambanan.png" class="card-img-top" alt="Prambanan">
-            <div class="card-body">
-              <h5 class="card-title">Prambanan</h5>
-              <p class="card-text">Harga: Rp. 800,000</p>
-              <p class="card-text">Rating: 
-                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              </p>
-              <button class="btn btn-primary order-btn" data-title="Prambanan" data-price="Rp. 800,000">Order</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="images/bali.png" class="card-img-top" alt="Bali">
-            <div class="card-body">
-              <h5 class="card-title">Bali</h5>
-              <p class="card-text">Harga: Rp. 2,000,000</p>
-              <p class="card-text">Rating: 
-                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-              </p>
-              <button class="btn btn-primary order-btn" data-title="Bali" data-price="Rp. 2,000,000">Order</button>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
 
+  <div class="container mt-4">
+    <h2>Paket Wisata Palembang</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Gambar</th>
+          <th>Nama Tempat</th>
+          <th>Harga</th>
+          <th>Rating</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="/images/jembatanAmpera.png" class="img-thumbnail" alt="Jembatan Ampera" style="height: 100px;"></td>
+          <td>Jembatan Ampera</td>
+          <td>Rp. 250,000</td>
+          <td><span class="text-warning">★★★★★</span></td>
+        </tr>
+        <tr>
+          <td><img src="/images/kuto_besak.png" class="img-thumbnail" alt="Benteng Kuto Besak" style="height: 100px;"></td>
+          <td>Benteng Kuto Besak</td>
+          <td>Rp. 200,000</td>
+          <td><span class="text-warning">★★★★☆</span></td>
+
+        </tr>
+        <tr>
+          <td><img src="/images/balaputra_dewa.png" class="img-thumbnail" alt="Museum Balaputra Dewa" style="height: 100px;"></td>
+          <td>Museum Balaputra Dewa</td>
+          <td>Rp. 180,000</td>
+          <td><span class="text-warning">★★★★☆</span></td>
+
+        </tr>
+        <tr>
+          <td><img src="/images/punti_kayu.png" class="img-thumbnail" alt="Taman Wisata Alam Punti Kayu" style="height: 100px;"></td>
+          <td>Taman Wisata Alam Punti Kayu</td>
+          <td>Rp. 150,000</td>
+          <td><span class="text-warning">★★★★☆</span></td>
+
+        </tr>
+        <tr>
+          <td><img src="/images/taman_purbakala.png" class="img-thumbnail" alt="Taman Purbakala Bukit Siguntang" style="height: 100px;"></td>
+          <td>Taman Purbakala Bukit Siguntang</td>
+          <td>Rp. 100,000</td>
+          <td><span class="text-warning">★★★★☆</span></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
   `
 })
 %>

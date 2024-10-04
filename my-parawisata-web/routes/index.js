@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Beranda' });
 });
@@ -15,7 +14,11 @@ router.get('/orderpaket', function(req, res, next) {
 });
 
 router.post('/orderdetail', function(req, res, next) {
-  res.render('orderdetail', { title: 'Detail Pemesanan Paket' });
+  const { paketWisata, harga, nama, email } = req.body;
+  res.render('orderdetail', { 
+    title: 'Detail Pemesanan Paket',
+    orderDetails: { paketWisata, harga, nama, email }
+  });
 });
 
 module.exports = router;

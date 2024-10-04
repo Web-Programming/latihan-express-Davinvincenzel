@@ -1,8 +1,128 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+  margin-top: 20px;
+}
+
+.table thead th {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.table tbody tr {
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.table tbody tr:hover {
+  transform: translateY(-5px);
+}
+
+.table td {
+  padding: 25px 20px;
+  vertical-align: middle;
+}
+
+.table td:first-child {
+  width: 200px;
+  height: 200px;
+}
+
+.img-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.img-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.table td:nth-child(2) {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.table td:nth-child(3) {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.text-warning {
+  color: #f39c12;
+  font-size: 22px;
+}
+
+@media (max-width: 768px) {
+  .table thead {
+    display: none;
+  }
+  
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+  
+  .table tr {
+    margin-bottom: 30px;
+  }
+  
+  .table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 20px;
+    width: 45%;
+    padding-right: 15px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+    color: #3498db;
+  }
+
+  .table td:first-child {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-left: 20px;
+  }
+
+  .img-thumbnail {
+    width: 200px;
+    height: 200px;
+  }
 }
