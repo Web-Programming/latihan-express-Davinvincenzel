@@ -1,0 +1,16 @@
+<div class="container mt-4">
+    <div class="container mt-4">
+        <h2>Detail Pemesanan Paket Wisata</h2>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Nota Pemesanan</h5>
+            <p class="card-text"><strong>Paket Wisata:</strong> <%= orderDetails.paketWisata %></p>
+            <p class="card-text"><strong>Harga:</strong> <%= orderDetails.harga %></p>
+            <p class="card-text"><strong>Nama Pemesan:</strong> <%= orderDetails.nama %></p>
+            <p class="card-text"><strong>Email:</strong> <%= orderDetails.email %></p>
+            <p class="card-text"><strong>Tanggal Pemesanan:</strong> <%= new Date().toLocaleString("id-ID") %></p>
+          </div>
+        </div>
+        <a href="/paketwisata" class="btn btn-primary mt-3">Kembali ke Paket Wisata</a>
+      </div>
+</div>
