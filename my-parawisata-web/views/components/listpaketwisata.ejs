@@ -45,10 +45,14 @@
           <td><span class="text-warning">★★★★☆</span></td>
 
         </tr>
+        <% listpaketwisata.forEach(paket => { %>
+          <tr>
+            <td><img src="/images/<%= paket.nama.toLowerCase().replace(/ /g, '_') %>.png" class="img-thumbnail" alt="<%= paket.nama %>" style="height: 100px;"></td>
+            <td><%= paket.nama %></td>
+            <td>Rp. <%= paket.harga.toLocaleString('id-ID') %></td>
+            <td><span class="text-warning">★★★★☆</span></td>
+          </tr>
+        <% }) %>
       </tbody>
     </table>
   </div>
-<% listpaketwisata.forEach(paket => { %>
-
-    <%= paket.nama %>
-<% }) %>
