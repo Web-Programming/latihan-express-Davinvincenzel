@@ -7,7 +7,7 @@ require('./app-server/models/db');
 
 var indexRouter = require('./app-server/routes/index');
 var usersRouter = require('./app-server/routes/users');
-
+var mahasiswasRouter = require('./app-server/routes/mahasiswas');
 var app = express();
 
 // view engine setup
@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
+app.use('/api', mahasiswasRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
