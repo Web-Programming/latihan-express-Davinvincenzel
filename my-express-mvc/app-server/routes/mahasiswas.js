@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const mahasiswaController = require('../controllers/mahasiswa');
+const mahasiswaController = require('../controllers/mahasiswacontroller');
 
 router.get("/mahasiswa", mahasiswaController.index); 
 router.post("/insert", mahasiswaController.insert);

@@ -1,5 +1,6 @@
 let mongoose = require('mongoose');
-let dbUrl ="mongodb+srv://paw2:si@paw2.iendmj6.mongodb.net/PAWII-SI?retryWrites=true&w=majority&appName=paw2";
+let dbUrl = "mongodb://localhost:27017/pawll-si52";
+// let dbUrl ="mongodb+srv://paw2:si@paw2.iendmj6.mongodb.net/PAWII-SI?retryWrites=true&w=majority&appName=paw2";
 
 mongoose.connect(dbUrl,{
    // useNewUrlParser: true,
