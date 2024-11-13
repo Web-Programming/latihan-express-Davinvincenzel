@@ -7,7 +7,7 @@ require('./app-server/models/db');
 
 var indexRouter = require('./app-server/routes/index');
 var usersRouter = require('./app-server/routes/users');
-var mahasiswasRouter = require('./app-server/routes/mahasiswas');
+var mahasiswasRouter = require('./app-server/routes/mahasiswa');
 var app = express();
 
 // view engine setup
