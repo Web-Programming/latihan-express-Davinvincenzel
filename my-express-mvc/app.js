@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 require('./app-server/models/db');
 
+
+
 var indexRouter = require('./app-server/routes/index');
 var usersRouter = require('./app-server/routes/users');
 var mahasiswasRouter = require('./app-server/routes/mahasiswa');
@@ -15,12 +17,17 @@ var app = express();
 app.set('views', path.join(__dirname, 'app-server/views'));
 app.set('view engine', 'ejs');
 
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+// ALLOW CORS
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  next();
+});
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api', mahasiswasRouter);
