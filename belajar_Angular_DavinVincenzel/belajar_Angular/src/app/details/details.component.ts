@@ -1,16 +1,17 @@
-import { Component, Inject, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HousingService } from '../housing.service';
 import { HousingLocation } from '../housing-location';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-details',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   template: `
      <article >
-      <img class="listing-photo" [src]="baseUrl+housingLocation?.photo"
+      <img class="listing-photo" [src]="housingService.baseUrl+housingLocation?.photo"
         alt="Exterior photo of {{housingLocation?.name}}"/>
       <section class="listing-description">
         <h2 class="listing-heading">{{housingLocation?.name}}</h2>
@@ -45,7 +46,7 @@ export class DetailsComponent {
   housingLocationId = 0;
   housingService: HousingService = inject(HousingService);
   housingLocation: HousingLocation | undefined
-  readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
+  
   applyForm: FormGroup = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
@@ -56,8 +57,9 @@ export class DetailsComponent {
     this.housingService.getHousingLocationById(this.housingLocationId)
     .then(location => {
       this.housingLocation = location;
+      console.table(this.housingLocation)
     })
-    console.table(this.housingLocation)
+    
   }
 
   submitApplyForm(){

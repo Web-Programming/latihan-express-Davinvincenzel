@@ -1,5 +1,5 @@
 const Housing = require('../models/housing');
-const register = require('../models/register');
+
 const Index = async (req, res) => {
   try {
     const housing = await Housing.find();
@@ -14,9 +14,9 @@ const Index = async (req, res) => {
 
 //untuk menghandle request show detail
 const show = (req, res, next) => {
-  const id = parseInt(req.params.id, 10);
+  const id = parseInt(req.params.id);
   Housing
-      .findOne({id:(parseInt(req.params.id, 10))})
+      .findOne({id:(parseInt(req.params.id))})
       .then((hs) =>{
           const responseMessage = 
               hs
@@ -43,4 +43,4 @@ const Insert = async (req, res) => {
   }
 }
 
-module.exports = {Index, show, Insert};
+module.exports = {Index, show};
