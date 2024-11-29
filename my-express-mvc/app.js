@@ -1,9 +1,12 @@
+require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
 require('./app-server/models/db');
+require("./app-server/configs/passport");
 
 
 
@@ -14,6 +17,7 @@ var housingRouter = require('./app-server/routes/housing');
 var registerController = require('./app-server/routes/register');
 var app = express();
 
+app.use(cors())
 // view engine setup
 app.set('views', path.join(__dirname, 'app-server/views'));
 app.set('view engine', 'ejs');
@@ -36,7 +40,6 @@ app.use('/users', usersRouter);
 app.use('/api', mahasiswasRouter);
 app.use('/housing', housingRouter);
 app.use('/insert', registerController);
-app.u
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
