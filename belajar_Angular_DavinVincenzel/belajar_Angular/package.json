@@ -22,7 +22,9 @@
     "@angular/router": "^18.2.0",
     "@angular/ssr": "^18.2.11",
     "express": "^4.18.2",
+    "localstorage": "^1.0.1",
     "rxjs": "~7.8.0",
+    "ssr": "^6.2.82",
     "sweetalert2": "^11.14.5",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
